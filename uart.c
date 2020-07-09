@@ -150,7 +150,7 @@ Date        Description
 	#define UART0_TRANSMIT_INTERRUPT  UART_UDRE_vect
 	#define UART0_STATUS   USR
 	#define UART0_CONTROL  UCR
-	#define UART0_DATA     UDR  
+	#define UART0_DATA     UDR
 	#define UART0_UDRIE    UDRIE
 #elif defined(__AVR_AT90S2333__) || defined(__AVR_AT90S4433__)
 	/* old AVR classic with one UART */
@@ -159,7 +159,7 @@ Date        Description
 	#define UART0_TRANSMIT_INTERRUPT  UART_UDRE_vect
 	#define UART0_STATUS   UCSRA
 	#define UART0_CONTROL  UCSRB
-	#define UART0_DATA     UDR 
+	#define UART0_DATA     UDR
 	#define UART0_UDRIE    UDRIE
 #elif  defined(__AVR_ATmega8__)  || defined(__AVR_ATmega16__) || defined(__AVR_ATmega32__) \
   || defined(__AVR_ATmega323__)
@@ -190,7 +190,7 @@ Date        Description
 	#define UART0_CONTROL  UCSRB
 	#define UART0_DATA     UDR
 	#define UART0_UDRIE    UDRIE
-#elif defined(__AVR_ATmega163__) 
+#elif defined(__AVR_ATmega163__)
 	/* ATmega163 with one UART */
 	#define ATMEGA_UART
 	#define UART0_RECEIVE_INTERRUPT   UART_RX_vect
@@ -199,7 +199,7 @@ Date        Description
 	#define UART0_CONTROL  UCSRB
 	#define UART0_DATA     UDR
 	#define UART0_UDRIE    UDRIE
-#elif defined(__AVR_ATmega162__) 
+#elif defined(__AVR_ATmega162__)
 	/* ATmega with two USART */
 	#define ATMEGA_USART0
 	#define ATMEGA_USART1
@@ -215,7 +215,7 @@ Date        Description
 	#define UART1_CONTROL  UCSR1B
 	#define UART1_DATA     UDR1
 	#define UART1_UDRIE    UDRIE1
-#elif defined(__AVR_ATmega64__) || defined(__AVR_ATmega128__) 
+#elif defined(__AVR_ATmega64__) || defined(__AVR_ATmega128__)
 	/* ATmega with two USART */
 	#define ATMEGA_USART0
 	#define ATMEGA_USART1
@@ -234,7 +234,7 @@ Date        Description
 #elif defined(__AVR_ATmega161__)
 	/* ATmega with UART */
 	#error "AVR ATmega161 currently not supported by this libaray !"
-#elif defined(__AVR_ATmega169__) 
+#elif defined(__AVR_ATmega169__)
 	/* ATmega with one USART */
 	#define ATMEGA_USART
 	#define UART0_RECEIVE_INTERRUPT   USART0_RX_vect
@@ -245,7 +245,7 @@ Date        Description
 	#define UART0_UDRIE    UDRIE
 #elif defined(__AVR_ATmega48__) ||defined(__AVR_ATmega88__) || defined(__AVR_ATmega168__) || \
       defined(__AVR_ATmega48P__) ||defined(__AVR_ATmega88P__) || defined(__AVR_ATmega168P__) || \
-      defined(__AVR_ATmega328P__) 
+      defined(__AVR_ATmega328P__)
 	/* TLS-Added 48P/88P/168P/328P */
 	/* ATmega with one USART */
 	#define ATMEGA_USART0
@@ -257,7 +257,7 @@ Date        Description
 	#define UART0_UDRIE    UDRIE0
 #elif defined(__AVR_ATtiny2313__) || defined(__AVR_ATtiny2313A__) || defined(__AVR_ATtiny4313__)
 	#define ATMEGA_USART
-	#define UART0_RECEIVE_INTERRUPT   USART_RX_vect 
+	#define UART0_RECEIVE_INTERRUPT   USART_RX_vect
 	#define UART0_TRANSMIT_INTERRUPT  USART_UDRE_vect
 	#define UART0_STATUS   UCSRA
 	#define UART0_CONTROL  UCSRB
@@ -307,15 +307,15 @@ Date        Description
 	#define UART1_STATUS   UCSR1A
 	#define UART1_CONTROL  UCSR1B
 	#define UART1_DATA     UDR1
-	#define UART1_UDRIE    UDRIE1  
+	#define UART1_UDRIE    UDRIE1
 	#define UART2_STATUS   UCSR2A
 	#define UART2_CONTROL  UCSR2B
 	#define UART2_DATA     UDR2
-	#define UART2_UDRIE    UDRIE2  
+	#define UART2_UDRIE    UDRIE2
 	#define UART3_STATUS   UCSR3A
 	#define UART3_CONTROL  UCSR3B
 	#define UART3_DATA     UDR3
-	#define UART3_UDRIE    UDRIE3  
+	#define UART3_UDRIE    UDRIE3
 #elif defined(__AVR_ATmega644__)
 	/* ATmega with one USART */
 	#define ATMEGA_USART0
@@ -354,7 +354,7 @@ Date        Description
 	#if defined(ATMEGA_USART) || defined(ATMEGA_USART0)
 		static volatile uint8_t UART_TxBuf[UART_TX0_BUFFER_SIZE];
 		static volatile uint8_t UART_RxBuf[UART_RX0_BUFFER_SIZE];
-		
+
 		#if defined(USART0_LARGE_BUFFER)
 			static volatile uint16_t UART_TxHead;
 			static volatile uint16_t UART_TxTail;
@@ -368,7 +368,7 @@ Date        Description
 			static volatile uint8_t UART_RxTail;
 			static volatile uint8_t UART_LastRxError;
 		#endif
-		
+
 	#endif
 #endif
 
@@ -376,7 +376,7 @@ Date        Description
 	#if defined(ATMEGA_USART1)
 		static volatile uint8_t UART1_TxBuf[UART_TX1_BUFFER_SIZE];
 		static volatile uint8_t UART1_RxBuf[UART_RX1_BUFFER_SIZE];
-		
+
 		#if defined(USART1_LARGE_BUFFER)
 			static volatile uint16_t UART1_TxHead;
 			static volatile uint16_t UART1_TxTail;
@@ -389,7 +389,7 @@ Date        Description
 			static volatile uint8_t UART1_RxHead;
 			static volatile uint8_t UART1_RxTail;
 			static volatile uint8_t UART1_LastRxError;
-		#endif		
+		#endif
 	#endif
 #endif
 
@@ -410,7 +410,7 @@ Date        Description
 			static volatile uint8_t UART2_RxHead;
 			static volatile uint8_t UART2_RxTail;
 			static volatile uint8_t UART2_LastRxError;
-		#endif		
+		#endif
 	#endif
 #endif
 
@@ -450,11 +450,11 @@ Purpose:  called when the UART has received a character
     uint8_t data;
     uint8_t usr;
     uint8_t lastRxError;
- 
-    /* read UART status register and UART data register */ 
+
+    /* read UART status register and UART data register */
     usr  = UART0_STATUS;
     data = UART0_DATA;
-    
+
     /* */
 #if defined(AT90_UART)
     lastRxError = (usr & (_BV(FE)|_BV(DOR)));
@@ -465,10 +465,10 @@ Purpose:  called when the UART has received a character
 #elif defined (ATMEGA_UART)
     lastRxError = (usr & (_BV(FE)|_BV(DOR)));
 #endif
-        
-    /* calculate buffer index */ 
+
+    /* calculate buffer index */
     tmphead = (UART_RxHead + 1) & UART_RX0_BUFFER_MASK;
-    
+
     if (tmphead == UART_RxTail) {
         /* error: receive buffer overflow */
         lastRxError = UART_BUFFER_OVERFLOW >> 8;
@@ -478,7 +478,7 @@ Purpose:  called when the UART has received a character
         /* store received data in buffer */
         UART_RxBuf[tmphead] = data;
     }
-    UART_LastRxError = lastRxError;   
+    UART_LastRxError = lastRxError;
 }
 
 
@@ -511,13 +511,13 @@ Returns:  none
 **************************************************************************/
 void uart0_init(uint16_t baudrate)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART_TxHead = 0;
 		UART_TxTail = 0;
 		UART_RxHead = 0;
 		UART_RxTail = 0;
 	}
-	
+
 #if defined(AT90_UART)
 	/* set baud rate */
 	UBRR = (uint8_t) baudrate;
@@ -591,17 +591,17 @@ uint16_t uart0_getc(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART_RxHead == UART_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-	
+
 	/* calculate / store buffer index */
 	tmptail = (UART_RxTail + 1) & UART_RX0_BUFFER_MASK;
-	
+
 	UART_RxTail = tmptail;
-	
+
 	/* get data from receive buffer */
 	data = UART_RxBuf[tmptail];
 
@@ -623,12 +623,12 @@ uint16_t uart0_peek(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART_RxHead == UART_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-	
+
 	tmptail = (UART_RxTail + 1) & UART_RX0_BUFFER_MASK;
 
 	/* get data from receive buffer */
@@ -654,15 +654,15 @@ void uart0_putc(uint8_t data)
 	tmphead = (UART_TxHead + 1) & UART_TX0_BUFFER_MASK;
 
 	do {
-		ATOMIC_BLOCK(ATOMIC_FORCEON) {
+		ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 			txtail_tmp = UART_TxTail;
 		}
 	} while (tmphead == txtail_tmp); /* wait for free space in buffer */
 #else
 	uint16_t tmphead;
-	
+
 	tmphead = (UART_TxHead + 1) & UART_TX0_BUFFER_MASK;
-	
+
 	while (tmphead == UART_TxTail); /* wait for free space in buffer */
 #endif
 
@@ -717,8 +717,8 @@ Returns:  Integer number of bytes in the receive buffer
 uint16_t uart0_available(void)
 {
 	uint16_t ret;
-	
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		ret = (UART_RX0_BUFFER_SIZE + UART_RxHead - UART_RxTail) & UART_RX0_BUFFER_MASK;
 	}
 	return ret;
@@ -732,7 +732,7 @@ Returns:  None
 **************************************************************************/
 void uart0_flush(void)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART_RxHead = UART_RxTail;
 	}
 } /* uart0_flush */
@@ -811,7 +811,7 @@ Returns:  none
 **************************************************************************/
 void uart1_init(uint16_t baudrate)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {	
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART1_TxHead = 0;
 		UART1_TxTail = 0;
 		UART1_RxHead = 0;
@@ -849,7 +849,7 @@ uint16_t uart1_getc(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART1_RxHead == UART1_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
@@ -880,12 +880,12 @@ uint16_t uart1_peek(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART1_RxHead == UART1_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-	
+
 	tmptail = (UART1_RxTail + 1) & UART_RX1_BUFFER_MASK;
 
 	/* get data from receive buffer */
@@ -903,7 +903,7 @@ Returns:  none
 **************************************************************************/
 void uart1_putc(uint8_t data)
 {
-	
+
 #ifdef USART1_LARGE_BUFFER
 	uint16_t tmphead;
 	uint16_t txtail_tmp;
@@ -911,17 +911,17 @@ void uart1_putc(uint8_t data)
 	tmphead = (UART1_TxHead + 1) & UART_TX1_BUFFER_MASK;
 
 	do {
-		ATOMIC_BLOCK(ATOMIC_FORCEON) {
+		ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 			txtail_tmp = UART1_TxTail;
 		}
 	} while (tmphead == txtail_tmp); /* wait for free space in buffer */
 #else
 	uint16_t tmphead;
-	
+
 	tmphead = (UART1_TxHead + 1) & UART_TX1_BUFFER_MASK;
-	
+
 	while (tmphead == UART1_TxTail); /* wait for free space in buffer */
-#endif	
+#endif
 
 	UART1_TxBuf[tmphead] = data;
 	UART1_TxHead = tmphead;
@@ -974,8 +974,8 @@ Returns:  Integer number of bytes in the receive buffer
 uint16_t uart1_available(void)
 {
 	uint16_t ret;
-	
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		ret = (UART_RX1_BUFFER_SIZE + UART1_RxHead - UART1_RxTail) & UART_RX1_BUFFER_MASK;
 	}
 	return ret;
@@ -991,7 +991,7 @@ Returns:  None
 **************************************************************************/
 void uart1_flush(void)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART1_RxHead = UART1_RxTail;
 	}
 } /* uart1_flush */
@@ -1072,7 +1072,7 @@ Returns:  none
 **************************************************************************/
 void uart2_init(uint16_t baudrate)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART2_TxHead = 0;
 		UART2_TxTail = 0;
 		UART2_RxHead = 0;
@@ -1110,14 +1110,14 @@ uint16_t uart2_getc(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART2_RxHead == UART2_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-	
+
 	/* calculate / store buffer index */
-	
+
 	tmptail = (UART2_RxTail + 1) & UART_RX2_BUFFER_MASK;
 	UART2_RxTail = tmptail;
 
@@ -1142,12 +1142,12 @@ uint16_t uart2_peek(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART2_RxHead == UART2_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-	
+
 	tmptail = (UART2_RxTail + 1) & UART_RX2_BUFFER_MASK;
 
 	/* get data from receive buffer */
@@ -1173,21 +1173,21 @@ void uart2_putc(uint8_t data)
 	tmphead = (UART2_TxHead + 1) & UART_TX2_BUFFER_MASK;
 
 	do {
-		ATOMIC_BLOCK(ATOMIC_FORCEON) {
+		ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 			txtail_tmp = UART2_TxTail;
 		}
 	} while (tmphead == txtail_tmp); /* wait for free space in buffer */
 #else
 	uint16_t tmphead;
-	
+
 	tmphead = (UART2_TxHead + 1) & UART_TX2_BUFFER_MASK;
-	
+
 	while (tmphead == UART2_TxTail); /* wait for free space in buffer */
-#endif		
+#endif
 
 	UART2_TxBuf[tmphead] = data;
 	UART2_TxHead = tmphead;
-	
+
 	/* enable UDRE interrupt */
 	UART2_CONTROL |= _BV(UART2_UDRIE);
 
@@ -1235,8 +1235,8 @@ Returns:  Integer number of bytes in the receive buffer
 uint16_t uart2_available(void)
 {
 	uint16_t ret;
-	
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		ret = (UART_RX2_BUFFER_SIZE + UART2_RxHead - UART2_RxTail) & UART_RX2_BUFFER_MASK;
 	}
 	return ret;
@@ -1252,7 +1252,7 @@ Returns:  None
 **************************************************************************/
 void uart2_flush(void)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART2_RxHead = UART2_RxTail;
 	}
 } /* uart2_flush */
@@ -1332,7 +1332,7 @@ Returns:  none
 **************************************************************************/
 void uart3_init(uint16_t baudrate)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART3_TxHead = 0;
 		UART3_TxTail = 0;
 		UART3_RxHead = 0;
@@ -1370,12 +1370,12 @@ uint16_t uart3_getc(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART3_RxHead == UART3_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-	
+
 	/* calculate / store buffer index */
 	tmptail = (UART3_RxTail + 1) & UART_RX3_BUFFER_MASK;
 	UART3_RxTail = tmptail;
@@ -1401,12 +1401,12 @@ uint16_t uart3_peek(void)
 	uint16_t tmptail;
 	uint8_t data;
 
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		if (UART3_RxHead == UART3_RxTail) {
 			return UART_NO_DATA;   /* no data available */
 		}
 	}
-		
+
 	tmptail = (UART3_RxTail + 1) & UART_RX3_BUFFER_MASK;
 
 	/* get data from receive buffer */
@@ -1424,7 +1424,7 @@ Returns:  none
 **************************************************************************/
 void uart3_putc(uint8_t data)
 {
-	
+
 #ifdef USART3_LARGE_BUFFER
 	uint16_t tmphead;
 	uint16_t txtail_tmp;
@@ -1432,17 +1432,17 @@ void uart3_putc(uint8_t data)
 	tmphead = (UART3_TxHead + 1) & UART_TX3_BUFFER_MASK;
 
 	do {
-		ATOMIC_BLOCK(ATOMIC_FORCEON) {
+		ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 			txtail_tmp = UART3_TxTail;
 		}
 	} while (tmphead == txtail_tmp); /* wait for free space in buffer */
 #else
 	uint16_t tmphead;
-	
+
 	tmphead = (UART3_TxHead + 1) & UART_TX3_BUFFER_MASK;
-	
+
 	while (tmphead == UART3_TxTail); /* wait for free space in buffer */
-#endif	
+#endif
 
 	UART3_TxBuf[tmphead] = data;
 	UART3_TxHead = tmphead;
@@ -1495,8 +1495,8 @@ Returns:  Integer number of bytes in the receive buffer
 uint16_t uart3_available(void)
 {
 	uint16_t ret;
-	
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		ret = (UART_RX3_BUFFER_SIZE + UART3_RxHead - UART3_RxTail) & UART_RX3_BUFFER_MASK;
 	}
 	return ret;
@@ -1512,7 +1512,7 @@ Returns:  None
 **************************************************************************/
 void uart3_flush(void)
 {
-	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
 		UART3_RxHead = UART3_RxTail;
 	}
 } /* uart3_flush */
